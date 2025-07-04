@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>صفحتي الأكاديمية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri&display=swap');
+
+       body {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #f5f5f5;
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+        /* الحاوية التي تحتوي الموجات */
+        .waves {
+            position: fixed;
+            width: 200%;
+            height: 100vh;
+            top: 0;
+            left: -50%;
+            background:
+                repeating-linear-gradient(
+                    45deg,
+                    rgba(25, 135, 84, 0.6) 0,
+                    rgba(25, 135, 84, 0.6) 20px,
+                    rgba(13, 110, 253, 0.6) 20px,
+                    rgba(13, 110, 253, 0.6) 40px
+                );
+            animation: waveMove 10s linear infinite;
+            z-index: -1;
+            opacity: 0.35;
+        }
+
+        header {
+            background: linear-gradient(to left, #0d6efd, #0a58ca);
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+            font-family: 'Amiri', serif;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #0d6efd;
+            margin: 15px auto 30px auto;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-img {
+            width: 240px;
+            height: 240px;
+            object-fit: contain;
+            opacity: 0.5;
+            position: fixed;
+            top: 40px;
+            z-index: 1;
+        }
+
+        .logo-left {
+            left: 20px;
+        }
+
+        .logo-right {
+            right: 20px;
+        }
+
+        .image-container {
+            width: 250px;
+            margin: 0 auto 20px auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        section {
+            padding: 40px 20px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #0d6efd;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+        }
+
+        .links a {
+            margin: 5px;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        footer {
+
+
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-family: 'Amiri', serif;
+            font-size: 1.1rem;
+
+
+
+        }
+
+        .upload-btn {
+            display: inline-block;
+            margin: 5px 10px;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#"> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#my-degree">My Degree</a></li>
+        <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+        <li class="nav-item"><a class="nav-link" href="#publication">Publication</a></li>
+        <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="home">
+
+********************************************
+
+    <h1>أهلاً وسهلاً بكم في صفحتي الأكاديمية</h1>
+    <p class="lead">الصادق لا تقلقة ضعف الذاكرة</p>
+********************************************
+</header>
+
+
+
+<section class="text-center" style="position: relative;">
+    <img id="universityLogo" src="https://upload.wikimedia.org/wikipedia/ar/thumb/4/4a/King_Saud_University_logo.svg/120px-King_Saud_University_logo.svg.png" alt="  " class="logo-img logo-left" />
+    <img id="labLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Logo_CNRS.svg/120px-Logo_CNRS.svg.png" alt="  " class="logo-img logo-right" />
+
+    <div class="image-container">
+        <img id="profileImage" src="images/profile.jpg" alt=" " class="profile-img" />
+    </div>
+
+    <div>
+        <label class="btn btn-outline-primary upload-btn" for="uploadUniversityLogo">  </label>
+        <input type="file" id="uploadUniversityLogo" accept="image/*" />
+
+        <label class="btn btn-outline-primary upload-btn" for="uploadProfileImage"> </label>
+        <input type="file" id="uploadProfileImage" accept="image/*" />
+
+        <label class="btn btn-outline-primary upload-btn" for="uploadLabLogo">  </label>
+        <input type="file" id="uploadLabLogo" accept="image/*" />
+    </div>
+
+    <h2>خليفة عبدالكريم</h2>
+    <p class="text-muted"> * مدير بحث * </p>
+</section>
+
+<section class="container" id="my-degree">
+    <h3 class="section-title">نبذة عني</h3>
+    <p>
+        دكتوراه في الفيزياء. تتركز خبرتي في النمذجة والمحاكاة العددية باستخدام أدوات مثل ANSYS Fluent لدراسة انتقال الحرارة وتدفق الموائع. أجمع بين العمل الحسابي والتحقق التجريبي لضمان دقة النتائج وقابليتها للتطبيق. تشمل أبحاثي ميكانيكا الموائع، وعلوم المواد، وتكنولوجيا النانو لتحسين كفاءة أنظمة الطاقة.
+    </p>
+</section>
+
+<section class="container" id="activities">
+    <h3 class="section-title">روابط مهمة</h3>
+    <div class="links d-flex flex-wrap justify-content-start">
+        <a class="btn btn-outline-primary me-2 mb-2" href="https://scholar.google.com/citations?hl=fr&user=NdcR26wAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>
+        <a class="btn btn-outline-success me-2 mb-2" href="https://www.researchgate.net/profile/A-Khelifa" target="_blank">ResearchGate</a>
+        <a class="btn btn-outline-info me-2 mb-2" href="https://orcid.org/0000-0003-3967-5868" target="_blank">ORCID</a>
+        <a class="btn btn-outline-info me-2 mb-2" href="https://www.scopus.com/authid/detail.uri?authorId=56583967800" target="_blank">SCOPUS</a>
+    </div>
+</section>
+
+<section class="container" id="publication">
+    <h3 class="section-title">أهم أبحاثي ومنشوراتي</h3>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <strong>عنوان البحث الأول</strong> – 2025  
+            <br><a href="https://doi.org/10.1016/j.applthermaleng.2025.127247" target="_blank"> https://doi.org/10.1016/j.applthermaleng.2025.127247</a>
+        </li>
+        <li class="list-group-item">
+            <strong>عنوان البحث الثاني</strong> – 2025  
+            <br><a href="https://doi.org/10.1016/j.applthermaleng.2025.127283" target="_blank">https://doi.org/10.1016/j.applthermaleng.2025.127283</a>
+        </li>
+        <li class="list-group-item">
+            <strong>عنوان البحث الثالث</strong> – 2025  
+            <br><a href="https://doi.org/10.1115/1.4068070 " target="_blank">https://doi.org/10.1115/1.4068070</a>
+        </li>
+        <li class="list-group-item">
+            <strong>عنوان البحث الرابع</strong> – 2025  
+            <br><a href="https://doi.org/10.1016/j.applthermaleng.2025.125974" target="_blank">https://doi.org/10.1016/j.applthermaleng.2025.125974</a>
+        </li>
+        <li class="list-group-item">
+            <strong>عنوان البحث الخامس</strong> – 2025  
+            <br><a href="https://doi.org/10.1007/s10494-019-00098-5" target="_blank">https://doi.org/10.1007/s10494-019-00098-5</a>
+        </li>
+    </ul>
+</section>
+
+<section class="container" id="teaching">
+    <h3 class="section-title text-center mb-5">نماذج من أعمالي</h3>
+
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card h-100">
+                <a href="images/project1.jpg" class="glightbox" id="project1-link" target="_blank">
+                    <img src="images/111.jpg" alt="مشروع 1" class="img-fluid" />
+                </a>
+                <div class="card-body text-center">
+                    <label class="btn btn-outline-secondary mb-2">
+                        تغيير الصورة
+                        <input type="file" id="uploadProject1" accept="image/*" hidden>
+                    </label>
+
+                    <a id="downloadProject1" href="images/project1.jpg" download="مشروع-1.jpg" class="btn btn-primary mt-2">
+                        تحميل الصورة
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">منصة تعليمية ذكية</h5>
+                    <p class="card-text">قيد الانجاز ...مساحة تفاعلية متطورة تهدف إلى تحسين جودة المحتوى العام للصفحة من خلال تعزيز مستوى كل مشارك على حدة، عبر تقديم أدوات دعم وتوجيه مخصصة. كما تسعى هذه المساحة إلى تشجيع الحوار والتواصل بين الفاعلين المختلفين، مما يدفع نحو ابتكار وتطوير مشاريع مشتركة تساهم في تحقيق أهداف جماعية وتعزيز التعاون المثمر بين الجميع.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100">
+                <a href="#" class="glightbox" id="project2-link" target="_blank">
+                    <img src="images/222.jpg" alt="مشروع 2" class="img-fluid" />
+                </a>
+                <div class="card-body text-center">
+                    <label class="btn btn-outline-secondary mb-2">
+                        تغيير الصورة
+                        <input type="file" id="uploadProject2" accept="image/*" hidden>
+                    </label>
+
+                    <a id="downloadProject2" href="https://via.placeholder.com/500x300" download="مشروع-2.jpg" class="btn btn-primary mt-2">
+                        تحميل الصورة
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">نظام طاقوي هجين</h5>
+                    <p class="card-text">نظام طاقوي هجين PVT (الضوئي الحراري) يجمع بين توليد الكهرباء باستخدام الخلايا الشمسية (Photovoltaic) وتحويل الطاقة الشمسية إلى حرارة (Thermal). مهام تطوير هذا النظام تشمل تحسين كفاءة الخلايا الشمسية لتوليد الكهرباء، وتصميم وحدات حرارية لاستغلال الحرارة المولدة، وتطوير آليات تكامل بين الجزئين لضمان استغلال أمثل للطاقة الشمسية، بالإضافة إلى دراسة مواد وتقنيات تبريد فعالة لتحسين أداء النظام بشكل عام. الهدف النهائي هو زيادة الإنتاج الكلي للطاقة وتقليل الفاقد وتحقيق استدامة بيئية واقتصادية.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card h-100">
+                <a href="#" class="glightbox" id="project3-link" target="_blank">
+                    <img src="images/333.jpg" alt="مشروع 3" class="img-fluid" />
+                </a>
+                <div class="card-body text-center">
+                    <label class="btn btn-outline-secondary mb-2">
+                        تغيير الصورة
+                        <input type="file" id="uploadProject3" accept="image/*" hidden>
+                    </label>
+
+                    <a id="downloadProject3" href="https://via.placeholder.com/800x300" download="مشروع-3.jpg" class="btn btn-primary mt-2">
+                        تحميل الصورة
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">بوابة المؤتمرات العلمية</h5>
+                    <p class="card-text">موقع إلكتروني لاشهار أحدث المؤتمرات العلمية.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="container" id="contact">
+    <h3 class="section-title">تواصل معي</h3>
+    <p>البريد الإلكتروني: khelifa_karim@hotmail.fr</p>
+    <p> الهاتف:   262 - 205- 657 213+</p>
+</section>
+
+<footer>
+    &copy; 2025 د. خليفة عبدالكريم - جميع الحقوق محفوظة
+</footer>
+
+<script>
+  // تحميل الصور من localStorage عند تحميل الصفحة
+  window.addEventListener('load', () => {
+    const images = [
+      {id: 'profileImage', key: 'profileImage'},
+      {id: 'universityLogo', key: 'universityLogo'},
+      {id: 'labLogo', key: 'labLogo'},
+
+      // للأعمال - المشاريع
+      {id: 'project1-img', key: 'project1Image'},
+      {id: 'project2-img', key: 'project2Image'},
+      {id: 'project3-img', key: 'project3Image'}
+    ];
+    images.forEach(({id, key}) => {
+      const savedImage = localStorage.getItem(key);
+      if (savedImage) {
+        document.getElementById(id).src = savedImage;
+
+        // لو عندك روابط تحميل خاصة بالمشروع، حدث href أيضاً
+        if (id.startsWith('project')) {
+          const downloadLink = document.getElementById(id.replace('-img', '-link'));
+          const downloadAnchor = document.getElementById(id.replace('-img', '-download'));
+          if (downloadAnchor) {
+            downloadAnchor.href = savedImage;
+          }
+          if (downloadLink) {
+            downloadLink.href = savedImage;
+          }
+        }
+      }
+    });
+  });
+
+  // دالة لتعيين حدث رفع الصورة وتخزينها
+  function setupImageUpload(inputId, imgId, storageKey, downloadAnchorId=null, linkId=null) {
+    const input = document.getElementById(inputId);
+    const img = document.getElementById(imgId);
+
+    input.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const dataURL = e.target.result;
+          img.src = dataURL;
+          localStorage.setItem(storageKey, dataURL);
+
+          // تحديث رابط التحميل إذا موجود
+          if (downloadAnchorId) {
+            const downloadAnchor = document.getElementById(downloadAnchorId);
+            if (downloadAnchor) {
+              downloadAnchor.href = dataURL;
+            }
+          }
+          if (linkId) {
+            const link = document.getElementById(linkId);
+            if (link) {
+              link.href = dataURL;
+            }
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  }
+
+  setupImageUpload('uploadProfileImage', 'profileImage', 'profileImage');
+  setupImageUpload('uploadUniversityLogo', 'universityLogo', 'universityLogo');
+  setupImageUpload('uploadLabLogo', 'labLogo', 'labLogo');
+
+  setupImageUpload('uploadProject1', 'project1-img', 'project1Image', 'downloadProject1', 'project1-link');
+  setupImageUpload('uploadProject2', 'project2-img', 'project2Image', 'downloadProject2', 'project2-link');
+  setupImageUpload('uploadProject3', 'project3-img', 'project3Image', 'downloadProject3', 'project3-link');
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const isAdmin = false; // ✅ غيّر إلى true إذا كنت أنت صاحب الصفحة
+
+  window.addEventListener('DOMContentLoaded', () => {
+    if (!isAdmin) {
+      // 🔹 إخفاء جميع أزرار رفع الصور
+      const allLabels = document.querySelectorAll('label.upload-btn, label.btn');
+      allLabels.forEach(label => label.style.display = 'none');
+
+      const allInputs = document.querySelectorAll('input[type="file"]');
+      allInputs.forEach(input => input.style.display = 'none');
+
+      // 🔹 إخفاء أزرار التحميل أيضًا (Download)
+      const downloadButtons = document.querySelectorAll('a[download]');
+      downloadButtons.forEach(btn => btn.style.display = 'none');
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
